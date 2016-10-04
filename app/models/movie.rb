@@ -6,4 +6,5 @@ class Movie < ActiveRecord::Base
 	
 	def validRating
 		
+	end
 end
