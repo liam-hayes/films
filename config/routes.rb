@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :comments
+
   controller :sessions do
 	get 'login' => :new
 	post 'login' => :create
@@ -7,6 +9,10 @@ Rails.application.routes.draw do
 	delete 'logout' => :destroy
   end
 
+  resources :movies do
+	resources :comments
+  end
+  
   resources :users
 
   get 'pages/home'
